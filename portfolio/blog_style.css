@@ -1,0 +1,202 @@
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+container{
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 0.5fr 90% 2fr;
+    
+}
+navbar{
+    width:100%;
+    background-color: white ;
+    grid-area: 1 / 1 / 2 / 2;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px 20px 20px;
+    position: fixed;
+}
+.logo{
+    display: flex;
+   font-size: 3em;
+   line-height: 0.9em;
+}
+.logo a{
+         text-decoration: none;
+         color: rgb(0, 0, 0);
+   }
+    .logo a:hover{
+         -webkit-text-stroke: 2px rgb(0, 0, 0);
+          color:transparent;
+          letter-spacing: 0.03em;
+         transition-duration: 0.3s;
+    }
+
+    .navbar{
+    font-size: 3em;
+    padding: 0px 30px;;
+    }
+    ul{
+    display:flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    gap:20px;
+    margin: 0;
+    }
+    ul li a{
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    }
+    #active a{
+        -webkit-text-stroke: 3px black;
+        color:transparent;
+        letter-spacing: 0.05em;
+    }
+    ul li a:hover{
+        -webkit-text-stroke: 3px black;
+        color:transparent;
+        letter-spacing: 0.05em;
+        transition-duration: 0.3s;
+    }
+    ul li{
+        text-align: right;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        transform: skewY(10deg);
+        list-style: none;
+    }
+header{
+     background-image:url('https://jmd.im/wp-content/uploads/2017/06/blackii_thumbnail.jpg') ;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    grid-area: 2 / 1 / 3 / 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 4em;
+}
+.blog{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    font-size: 4em;
+    text-align: center;
+     -webkit-text-stroke: 2px rgb(255, 255, 255);
+    color:transparent;
+    letter-spacing: 0.03em;
+}
+.blog:hover{
+    color: rgb(255, 255, 255);
+    text-shadow: 8px 8px 5px rgba(252, 0, 0, 0.5);
+    transition-duration: 0.5s;
+}
+main{
+    padding:20px;
+    background-image:url('https://jmd.im/wp-content/uploads/2017/06/blackii_thumbnail.jpg') ;
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat-y;
+    background-attachment: fixed;
+    grid-area: 3 / 1 / 4 / 2;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.card-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center; 
+  align-items: flex-start;
+}
+
+.card{
+  background: rgba(214, 13, 13, 0.6);
+  border: 2px solid rgb(144, 12, 12);
+  padding: 20px;
+  min-height: 150px;
+  flex: 1 1 400px;
+  max-width:400px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.card:hover{
+    background: rgba(214, 13, 13);
+    box-shadow: 2px 2px 10px rgba(255, 0, 0, 0.5);
+    border: none;
+    transition-duration: 0.5s;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.info a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 1.4em;
+}
+#title{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.5em;
+    margin: 10px 0px 10px 0px;
+}
+#title a:hover{
+    -webkit-text-stroke: 1px rgb(0, 0, 0);
+    color:transparent;
+    letter-spacing: 0.02em;
+    transition-duration: 0.3s;
+}
+@media  (max-width: 981px) {
+  .navbar{
+        font-size: 2em;
+    }
+    .logo{
+        font-size: 2em;
+    }
+    .blog{
+        font-size: 2.5em;
+    }
+}
+@media  (max-width: 715px) {
+ .navbar{
+        font-size: 1em;
+    }
+    navbar{
+        padding: 10px 10px 10px 10px;
+    }
+    .logo{
+        font-size: 1em;
+    }
+    .blog{
+        font-size: 1em;
+    }
+
+}
+@media (max-width: 429px) {
+ .navbar{
+        display: none;
+    }
+    .logo{
+        font-size: 2em;
+    }
+    .blog{
+        font-size: 0.8em;
+    }
+    
+}

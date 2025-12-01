@@ -1,0 +1,195 @@
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+container{
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 0.5fr 4fr 1fr;
+}
+navbar{
+    background-color: white ;
+    grid-area: 1 / 1 / 2 / 2;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px 20px 20px;
+}
+.logo{
+    display: flex;
+   font-size: 3em;
+   line-height: 0.9em;
+}
+.logo a{
+         text-decoration: none;
+         color: rgb(0, 0, 0);
+   }
+    .logo a:hover{
+         -webkit-text-stroke: 2px rgb(0, 0, 0);
+          color:transparent;
+          letter-spacing: 0.03em;
+         transition-duration: 0.3s;
+    }
+
+    .navbar{
+    font-size: 3em;
+    }
+    ul{
+    display:flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    gap:20px;
+    margin: 0;
+    }
+    ul li a{
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    }
+    #active a{
+        -webkit-text-stroke: 3px black;
+        color:transparent;
+        letter-spacing: 0.05em;
+    }
+    ul li a:hover{
+        -webkit-text-stroke: 3px black;
+        color:transparent;
+        letter-spacing: 0.05em;
+        transition-duration: 0.3s;
+    }
+    ul li{
+        text-align: right;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        transform: skewY(10deg);
+        list-style: none;
+    }
+
+main{
+    grid-area: 2 / 1 / 3 / 2;
+    background-color: rgb(53, 18, 18);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+main p{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 5em;
+    color: white;
+    -webkit-text-stroke: 0.5px red;
+}
+main p:hover{
+    -webkit-text-stroke: 2px red;
+    color: transparent;
+    letter-spacing: 0.05em;
+    transition-duration: 0.3s;
+}
+.contact{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 80%;
+}
+.contact input, .contact textarea{
+    font-size: 1.2em;
+    padding: 10px;
+    border: 1.5px solid rgb(220, 30, 30);
+    border-radius: 5px;
+    width: 35%;
+    background-color: rgb(221, 216, 221);
+    animation:inputborderglow 3s infinite alternate;
+}
+@keyframes inputborderglow{
+    from{
+        box-shadow: 0 0 0 rgb(234, 104, 104);
+    }
+    to{
+        box-shadow: 0 0 10px rgb(234, 104, 104);
+    }
+}
+
+main button{
+    font-size: 1.5em;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(59, 57, 57);
+    cursor: pointer;
+    margin-top:30px;
+    margin-bottom: 100px;
+}
+footer{
+    grid-area: 3 / 1 / 4 / 2;
+    background-color: rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.footer-content{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    justify-content:center;
+    padding:10px 0 0 10px;
+}
+.footer-content div{
+    color: rgb(255, 255, 255);
+    font-size: 1em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.footer-content p{
+    align-self: center;
+    color:white;
+    font-size: 1em;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+@media (max-width: 960px){
+    .navbar{
+        font-size: 2em;
+    }
+    .logo{
+        font-size: 2em;
+    }
+
+}
+@media (max-width: 690px){
+    navbar{margin-top: 20px;
+        padding:10px;
+    }
+      .navbar{
+        font-size: 1.2em;
+    }
+    .logo{
+        font-size: 1.2em;
+    }
+
+    .contact input, .contact textarea{
+        width: 80%;
+    }
+    main p{
+        font-size: 3em;
+    }
+    .footer-content p{
+        margin-top: 20px;
+    }
+}
+@media (max-width: 460px){
+    .navbar{
+        display: none;
+    }
+}
